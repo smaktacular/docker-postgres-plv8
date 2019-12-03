@@ -26,12 +26,10 @@ You can optionally create a service using `docker-compose`:
 
 ```yml
 postgres:
-  image: smaktacular/postgres-plv8:10-2
+  image: smaktacular/postgres-plv8:121-2312
 ```
 
-## Image variants
-
-The `smaktacular/postgres-plv8` image comes in multiple flavors:
+## Flavors:
 
 ### `smaktacular/postgres-plv8:latest`
 
