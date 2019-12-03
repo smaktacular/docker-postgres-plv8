@@ -1,14 +1,16 @@
-name: Docker Image CI
+name: BuildDockerImage
 
-on: [push]
+on: [create]
 
 jobs:
 
-  build:
+  build12:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag smak/postgres-plv8:$(basename $(pwd)) --tag smak/postgres-plv8:$(date +%s)
+      run: >
+           cd 121-2312/
+           docker build . --file Dockerfile --tag smak/postgres-plv8:$(basename $(pwd)) --tag smak/postgres-plv8:$(date +%s)

@@ -1,13 +1,18 @@
-# postgres-plv8 (WIP)
+# (WIP) postgres-plv8 (WIP)
 
-Docker images for running [plv8](https://github.com/plv8/plv8) 2.x on Postgres 9+.
+Docker images for running [plv8](https://github.com/plv8/plv8) 2.x on Postgres 9 (and later).
 Based on the [official Postgres image](http://registry.hub.docker.com/_/postgres/).
 
-[![smaktacular/postgres-plv8][docker-pulls-image]][docker-hub-url] [![smaktacular/postgres-plv8][docker-stars-image]][docker-hub-url] [![smaktacular/postgres-plv8][docker-size-image]][docker-hub-url] [![smaktacular/postgres-plv8][docker-layers-image]][docker-hub-url]
+[![smaktacular/postgres-plv8][docker-pulls-image]][docker-hub-url] [![smaktacular/postgres-plv8][docker-stars-image]][docker-hub-url] 
+[![smaktacular/postgres-plv8][docker-size-image]][docker-hub-url] [![smaktacular/postgres-plv8][docker-layers-image]][docker-hub-url]
+
+## Build status
+
+![](https://github.com/smaktacular/docker-postgres-plv8/workflows/BuildDockerImage/badge.svg)
 
 ## Tags
 
-- `12-1`, `latest` ([12-1/Dockerfile](https://github.com/smaktacular/docker-postgres-plv8/blob/master/10-2/Dockerfile))
+- `121-2312`, `latest` ([121-2312/Dockerfile](https://github.com/smaktacular/docker-postgres-plv8/blob/master/121-2312/Dockerfile))
 
 ## Usage
 
@@ -16,7 +21,7 @@ Based on the [official Postgres image](http://registry.hub.docker.com/_/postgres
 This image behaves exactly like the official Postgres image with the only difference being the inclusion of the plv8 extension.
 
 ```sh
-$ docker run -d --name postgres smaktacular/postgres-plv8:10-2
+$ docker run -d --name postgres smaktacular/postgres-plv8:121-2312
 $ docker exec -it postgres bash -c 'psql -U postgres -c "CREATE EXTENSION plv8; SELECT extversion FROM pg_extension WHERE extname = ''plv8'';"'
 ```
 
@@ -41,7 +46,7 @@ Points to the latest release available of Postgres `<postgresVersion>` with the 
 
 ## Supported Docker versions
 
-This image is officially supported on Docker version 17.09, with support for older versions provided on a best-effort basis.
+This image is supported on Docker version 19.03, with support for older versions provided on a best-effort basis.
 
 ## License
 
