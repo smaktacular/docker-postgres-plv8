@@ -1,6 +1,4 @@
-FROM postgres:10
-
-MAINTAINER Chia-liang Kao <clkao@clkao.org>
+FROM postgres:9.6
 
 ENV PLV8_VERSION=v2.1.0 \
     PLV8_SHASUM="207d712e919ab666936f42b29ff3eae413736b70745f5bfeb2d0910f0c017a5c  v2.1.0.tar.gz"
@@ -9,7 +7,6 @@ RUN buildDependencies="build-essential \
     ca-certificates \
     curl \
     git-core \
-    python \
     postgresql-server-dev-$PG_MAJOR" \
   && apt-get update \
   && apt-get install -y --no-install-recommends ${buildDependencies} \

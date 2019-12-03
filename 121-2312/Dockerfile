@@ -1,4 +1,4 @@
-FROM postgres:12
+FROM postgres:12.1
 
 LABEL Author="Sebastian Koenig <sebastian.m.koenig@googlemail.com>"
 
