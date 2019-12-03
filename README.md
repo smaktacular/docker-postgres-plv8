@@ -1,4 +1,4 @@
-# postgres-plv8
+# postgres-plv8 (WIP)
 
 Docker images for running [plv8](https://github.com/plv8/plv8) 2.x on Postgres 9+.
 Based on the [official Postgres image](http://registry.hub.docker.com/_/postgres/).
